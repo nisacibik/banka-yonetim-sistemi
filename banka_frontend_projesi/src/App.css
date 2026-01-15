@@ -1,0 +1,132 @@
+
+/* src/App.css */
+:root {
+    --primary: #3498db;
+    --dark: #2c3e50;
+    --bg: #f4f7f6;
+    --border: #e2e8f0;
+    --white: #ffffff;
+    --danger: #e74c3c;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    min-height: 100vh;
+}
+
+/* --- GİRİŞ SAYFASI (TAM ORTALAMA) --- */
+.login-page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center; /* Dikey ortalama */
+    justify-content: center; /* Yatay ortalama */
+    background-color: var(--bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* --- HEADER VE NAVİGASYON --- */
+.App-header {
+    background: var(--dark);
+    padding: 15px 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header-top h1 { color: white; font-size: 24px; margin: 0; }
+
+.main-nav {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.main-nav button {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.main-nav button:hover, .main-nav button.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.logout-btn { background: var(--danger) !important; font-weight: bold; }
+
+/* --- TÜM SAYFALAR İÇİN ORTAK KART YAPISI --- */
+.component-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 35px;
+    border-bottom: 2px solid var(--bg);
+    padding-bottom: 25px;
+}
+
+/* Form Düzenleri (Yan Yana Dizilim İçin) */
+.form-wrapper { margin-top: 25px; }
+.form-group { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+.form-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+
+label { font-weight: 600; color: var(--dark); font-size: 15px; }
+
+input, select, textarea {
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 15px;
+    transition: 0.3s;
+    background: #fcfcfc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.1); }
+
+/* --- BUTONLAR --- */
+.login-button {
+    width: 100%;
+    background: var(--primary);
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-button:hover { background: #2980b9; transform: translateY(-2px); }
+
+/* --- TABLOLAR --- */
+.table-wrapper { overflow-x: auto; margin-top: 30px; border-radius: 12px; border: 1px solid var(--border); }
+table { width: 100%; border-collapse: collapse; }
+th { background: #f8fafc; padding: 18px; text-align: left; color: #64748b; border-bottom: 2px solid var(--border); font-size: 14px; }
+td { padding: 18px; border-bottom: 1px solid #f1f5f9; font-size: 15px; color: var(--dark); }
+tr:hover { background-color: #f8fafc; }

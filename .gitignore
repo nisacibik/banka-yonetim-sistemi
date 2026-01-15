@@ -1,0 +1,14 @@
+# Klasör isimlerini fotoğraftaki gibi güncelledik
+banka_django_projesi/venv/
+banka_django_projesi/db.sqlite3
+banka_django_projesi/__pycache__/
+
+banka_frontend_projesi/node_modules/
+banka_frontend_projesi/build/
+.eslintcache
+
+# Genel sistem dosyaları
+.DS_Store
+.vscode/
+venv/
+node_modules/
