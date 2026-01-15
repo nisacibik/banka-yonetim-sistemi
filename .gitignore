@@ -1,14 +1,22 @@
-# Klasör isimlerini fotoğraftaki gibi güncelledik
+# --- Güvenlik: Bu dosya asla gitmemeli! ---
+.env
+banka_django_projesi/.env
+banka_frontend_projesi/.env
+
+# --- Django (Backend) Engelleri ---
 banka_django_projesi/venv/
 banka_django_projesi/db.sqlite3
 banka_django_projesi/__pycache__/
+banka_django_projesi/*.pyc
 
+# --- React (Frontend) Engelleri ---
 banka_frontend_projesi/node_modules/
 banka_frontend_projesi/build/
-.eslintcache
+banka_frontend_projesi/.eslintcache
 
-# Genel sistem dosyaları
+# --- Genel Sistem ve IDE Dosyaları ---
 .DS_Store
 .vscode/
+.idea/
 venv/
 node_modules/
